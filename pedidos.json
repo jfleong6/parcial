@@ -1,0 +1,38 @@
+[
+    {
+        "cliente": "Jhon",
+        "items": [
+            {
+                "categoria": "entrada",
+                "nombre": "Empanadas Mini",
+                "precio": 45000,
+                "cantidad": 5
+            }
+        ],
+        "estado": "creado"
+    },
+    {
+        "cliente": "Fredy",
+        "items": [
+            {
+                "categoria": "entrada",
+                "nombre": "Empanadas Mini",
+                "precio": 45000,
+                "cantidad": 5
+            }
+        ],
+        "estado": "creado"
+    },
+    {
+        "cliente": "Jjjf",
+        "items": [
+            {
+                "categoria": "entrada",
+                "nombre": "Empanadas Mini",
+                "precio": 45000,
+                "cantidad": 5
+            }
+        ],
+        "estado": "creado"
+    }
+]
