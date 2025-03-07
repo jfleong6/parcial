@@ -34,11 +34,11 @@ def new_plato (categoria):
             pedido["precio"] = precio
             pedido["cantidad"] = cant
             
-            if input("1. agregar otro item\n0. Continuar") =="0":
+            if input("1. agregar otro item\n0. Continuar") != "1":
                 break                   
         else: 
             print("Opcion no valida")
-            if input("1. agregar otro item\n0. Continuar") =="0":
+            if input("1. agregar otro item\n0. Continuar") !="1":
                 break 
     return pedido
 def new_categoria():
@@ -49,7 +49,7 @@ def new_categoria():
             categoria =categorias[opcion]
             if categoria in lista_categorias():        
                 pedido = new_plato(categoria)
-                if input("1. agregar otra categoria\n0. Continuar") =="0":
+                if input("1. agregar otra categoria\n0. Continuar") !="1":
                     itmes.append(pedido)
                     break
             else:
@@ -65,7 +65,6 @@ def agregar_items():
 def nuevo_dato(nombre_archivo,titulo, formato, menu = "no", editar = "no", ID = ""):
     print(titulo)
     for i in formato:
-        print(i)
         if menu == "si" and i == "categoria":
             while True:
                 opcion = input(f"Ingrese {i} {menu_categoria}: ")
@@ -78,7 +77,7 @@ def nuevo_dato(nombre_archivo,titulo, formato, menu = "no", editar = "no", ID = 
             dato = agregar_items()
 
         elif i == "estado":
-                formato[i]="creado" 
+                dato="creado" 
         else:
             dato = input(f"Ingrese {i}: ")
         if i == "cliente" or i == "nombre":
@@ -87,13 +86,15 @@ def nuevo_dato(nombre_archivo,titulo, formato, menu = "no", editar = "no", ID = 
             dato = validar_numero(i,dato)
           
         formato[i]=dato
+    
     if editar == "no":
         agregar_json(nombre_archivo, formato)
     else:
+        
         datos = leer_json(nombre_archivo)
-        datos.pop(ID)
-        datos.insert(ID)
-        escribir_json("poblacion.json")
+        datos.pop(int(ID))
+        datos.insert(int(ID),formato)
+        escribir_json("pedidos.json",datos)
 
     print("Registro Exitosamente")
 

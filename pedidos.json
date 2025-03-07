@@ -12,7 +12,7 @@
         "estado": "creado"
     },
     {
-        "cliente": "Fredy",
+        "cliente": "Hgffghgf",
         "items": [
             {
                 "categoria": "entrada",
@@ -34,5 +34,29 @@
             }
         ],
         "estado": "creado"
+    },
+    {
+        "cliente": "Leon",
+        "items": [
+            {
+                "categoria": "entrada",
+                "nombre": "Empanadas Mini",
+                "precio": 45000,
+                "cantidad": 5
+            }
+        ],
+        "estado": "creado"
+    },
+    {
+        "cliente": "Hghgjgj",
+        "items": [
+            {
+                "categoria": "entrada",
+                "nombre": "Empanadas Mini",
+                "precio": 90000,
+                "cantidad": 10
+            }
+        ],
+        "estado": "anulado"
     }
 ]
