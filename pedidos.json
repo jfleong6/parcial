@@ -9,7 +9,9 @@
                 "cantidad": 5
             }
         ],
-        "estado": "creado"
+        "estado": "creado",
+        "total": 45000,
+        "tipo de pago": "CXP"
     },
     {
         "cliente": "Hgffghgf",
@@ -21,7 +23,9 @@
                 "cantidad": 5
             }
         ],
-        "estado": "creado"
+        "estado": "creado",
+        "total": 45000,
+        "tipo de pago": "Efectivo"
     },
     {
         "cliente": "Jjjf",
@@ -33,7 +37,9 @@
                 "cantidad": 5
             }
         ],
-        "estado": "creado"
+        "estado": "creado",
+        "total": 45000,
+        "tipo de pago": "CXP"
     },
     {
         "cliente": "Leon",
@@ -45,7 +51,9 @@
                 "cantidad": 5
             }
         ],
-        "estado": "creado"
+        "estado": "servido",
+        "total": 45000,
+        "tipo de pago": "CXP"
     },
     {
         "cliente": "Hghgjgj",
@@ -57,6 +65,160 @@
                 "cantidad": 10
             }
         ],
-        "estado": "anulado"
+        "estado": "anulado",
+        "total": 45000,
+        "tipo de pago": "CXP"
+    },
+    {
+        "cliente": "Jessica",
+        "items": [
+            {
+                "categoria": "entrada",
+                "nombre": "Empanadas Mini",
+                "precio": 45000,
+                "cantidad": 5
+            }
+        ],
+        "estado": "creado",
+        "total": 45000,
+        "tipo de pago": "CXP"
+    },
+    {
+        "cliente": "Tatiana",
+        "items": [
+            {
+                "categoria": "entrada",
+                "nombre": "Empanadas Mini",
+                "precio": 18000,
+                "cantidad": 2
+            }
+        ],
+        "estado": "creado",
+        "total": 43000,
+        "tipo de pago": "CXP"
+    },
+    {
+        "cliente": "Jessi",
+        "items": [
+            {
+                "categoria": "entrada",
+                "nombre": "Empanadas Mini",
+                "precio": 63000,
+                "cantidad": 7
+            },
+            {
+                "categoria": "plato fuerte",
+                "nombre": "Mojarra",
+                "precio": 50000,
+                "cantidad": 2
+            }
+        ],
+        "estado": "creado",
+        "total": 113000,
+        "tipo de pago": "CXP"
+    },
+    {
+        "cliente": "Manuel",
+        "items": [
+            {
+                "categoria": "entrada",
+                "nombre": "Empanadas Mini",
+                "precio": 27000,
+                "cantidad": 3
+            },
+            {
+                "categoria": "entrada",
+                "nombre": "Empanadas Mini",
+                "precio": 27000,
+                "cantidad": 3
+            },
+            {
+                "categoria": "plato fuerte",
+                "nombre": "Mojarra",
+                "precio": 50000,
+                "cantidad": 2
+            }
+        ],
+        "estado": "creado",
+        "total": 95000,
+        "tipo de pago": "CXP"
+    },
+    {
+        "cliente": "Jhon",
+        "items": [
+            {
+                "categoria": "entrada",
+                "nombre": "Arepa",
+                "precio": 45000,
+                "cantidad": 5
+            },
+            {
+                "categoria": "entrada",
+                "nombre": "Arepa",
+                "precio": 45000,
+                "cantidad": 5
+            },
+            {
+                "categoria": "plato fuerte",
+                "nombre": "Mojarra",
+                "precio": 50000,
+                "cantidad": 2
+            }
+        ],
+        "estado": "creado",
+        "total": 113000,
+        "tipo de pago": "CXP"
+    },
+    {
+        "cliente": "Fredy",
+        "items": [
+            {
+                "categoria": "entrada",
+                "nombre": "Empanadas Mini",
+                "precio": 9000,
+                "cantidad": 1
+            },
+            {
+                "categoria": "entrada",
+                "nombre": "Arepa",
+                "precio": 18000,
+                "cantidad": 2
+            },
+            {
+                "categoria": "plato fuerte",
+                "nombre": "Mojarra",
+                "precio": 50000,
+                "cantidad": 2
+            }
+        ],
+        "estado": "creado",
+        "total": 77000,
+        "tipo de pago": "CXP"
+    },
+    {
+        "cliente": "Jjd",
+        "items": [
+            {
+                "categoria": "entrada",
+                "nombre": "Empanadas Mini",
+                "precio": 45000,
+                "cantidad": 5
+            },
+            {
+                "categoria": "entrada",
+                "nombre": "Arepa",
+                "precio": 27000,
+                "cantidad": 3
+            },
+            {
+                "categoria": "plato fuerte",
+                "nombre": "Mojarra",
+                "precio": 50000,
+                "cantidad": 2
+            }
+        ],
+        "estado": "creado",
+        "total": 122000,
+        "tipo de pago": "Efectivo"
     }
 ]

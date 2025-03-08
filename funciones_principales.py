@@ -5,8 +5,7 @@ formato_menu = {
     "categoria": "",
     "nombre": "",
     "precio": "",
-    "cantidad": ""
-}
+    "cantidad": ""}
 
 def validar_numero(descripcion,dato):
     try:
@@ -22,8 +21,11 @@ def validar_numero(descripcion,dato):
 def new_plato (categoria):
     list_productos = {str(i):j for i,j in enumerate(lista_categorias()[categoria][0])}
     opciones_platos = [f"{key}. {plato}" for key, plato in list_productos.items()]
-    pedido = formato_menu.copy()
+    
+    platos = []
+    total = 0
     while True:
+        pedido = {}
         opcion = input(f"Ingrese plato {opciones_platos}: ")
         if opcion in list_productos:
             cant = input("Ingrese la cantidad")
@@ -33,38 +35,44 @@ def new_plato (categoria):
             pedido["nombre"] = list_productos[opcion]
             pedido["precio"] = precio
             pedido["cantidad"] = cant
-            
+            platos.append(pedido)
+            total += precio
             if input("1. agregar otro item\n0. Continuar") != "1":
                 break                   
         else: 
             print("Opcion no valida")
             if input("1. agregar otro item\n0. Continuar") !="1":
                 break 
-    return pedido
+    return platos, total
 def new_categoria():
     itmes = []
+    total = 0
     while True:
         opcion = input(f"Ingrese categoria {menu_categoria}: ")
         if opcion in categorias:
             categoria =categorias[opcion]
             if categoria in lista_categorias():        
-                pedido = new_plato(categoria)
+                pedido, sub_total = new_plato(categoria)
+                total += sub_total
+                for plato  in pedido:
+                    itmes.append(plato)
                 if input("1. agregar otra categoria\n0. Continuar") !="1":
-                    itmes.append(pedido)
+                    
                     break
             else:
                 print("Categoria no tiene platos")
-
         else:
             print("Opcion no valida")
-    return itmes
+    return itmes,total
 def agregar_items():
     return new_categoria()
         
         
 def nuevo_dato(nombre_archivo,titulo, formato, menu = "no", editar = "no", ID = ""):
     print(titulo)
+
     for i in formato:
+        print(i)
         if menu == "si" and i == "categoria":
             while True:
                 opcion = input(f"Ingrese {i} {menu_categoria}: ")
@@ -73,11 +81,16 @@ def nuevo_dato(nombre_archivo,titulo, formato, menu = "no", editar = "no", ID = 
                     break
                 else:
                     print("Opcion no valida")
-        if i == "items":
-            dato = agregar_items()
+        elif i == "items":
+            dato, total = agregar_items()
+            formato["total"] = total
 
         elif i == "estado":
-                dato="creado" 
+                dato="creado"
+        elif i == "total":
+            continue
+        elif i == "tipo de pago":
+            dato = "CXP"
         else:
             dato = input(f"Ingrese {i}: ")
         if i == "cliente" or i == "nombre":

@@ -3,5 +3,15 @@
         "categoria": "entrada",
         "nombre": "Empanadas Mini",
         "precio": 9000
+    },
+    {
+        "categoria": "plato fuerte",
+        "nombre": "Mojarra",
+        "precio": 25000
+    },
+    {
+        "categoria": "entrada",
+        "nombre": "Arepa",
+        "precio": 5000
     }
 ]
